@@ -1,0 +1,90 @@
+.job-details-page {
+  padding: 40px 0;
+  min-height: calc(100vh - 80px);
+}
+
+.job-details {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.job-header {
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #e5e7eb;
+}
+
+.job-header h1 {
+  color: #1f2937;
+  margin-bottom: 10px;
+}
+
+.job-header h2 {
+  color: #2563eb;
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.job-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 15px;
+  font-size: 16px;
+  color: #6b7280;
+}
+
+.salary {
+  font-size: 18px;
+  font-weight: 600;
+  color: #16a34a;
+}
+
+.job-content section {
+  margin-bottom: 30px;
+}
+
+.job-content h3 {
+  color: #1f2937;
+  margin-bottom: 15px;
+  font-size: 20px;
+}
+
+.job-content p, .job-content li {
+  color: #4b5563;
+  line-height: 1.8;
+  margin-bottom: 10px;
+}
+
+.job-content ul {
+  margin-left: 20px;
+}
+
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.apply-section {
+  margin-top: 40px;
+  padding-top: 30px;
+  border-top: 2px solid #e5e7eb;
+}
+
+.application-form {
+  background: #f9fafb;
+  padding: 30px;
+  border-radius: 8px;
+}
+
+.application-form h3 {
+  margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+  .job-meta {
+    flex-direction: column;
+    gap: 10px;
+  }
+}

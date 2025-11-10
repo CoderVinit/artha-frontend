@@ -1,0 +1,77 @@
+.applications-page {
+  padding: 40px 0;
+  min-height: calc(100vh - 80px);
+}
+
+.applications-page h1 {
+  margin-bottom: 30px;
+}
+
+.applications-list {
+  display: grid;
+  gap: 20px;
+}
+
+.application-card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.application-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.application-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.application-header h3 {
+  color: #1f2937;
+  margin-bottom: 5px;
+}
+
+.application-header .company {
+  color: #2563eb;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.application-header .location {
+  color: #6b7280;
+}
+
+.application-details {
+  color: #4b5563;
+}
+
+.cover-letter, .notes {
+  margin-top: 15px;
+}
+
+.cover-letter h4, .notes h4 {
+  color: #374151;
+  margin-bottom: 8px;
+  font-size: 16px;
+}
+
+.cover-letter p, .notes p {
+  line-height: 1.6;
+}
+
+.no-applications {
+  text-align: center;
+  padding: 40px;
+  color: #6b7280;
+}
+
+@media (max-width: 768px) {
+  .application-header {
+    flex-direction: column;
+    gap: 10px;
+  }
+}

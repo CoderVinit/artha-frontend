@@ -1,0 +1,25 @@
+.post-job-page {
+  padding: 40px 0;
+  min-height: calc(100vh - 80px);
+}
+
+.post-job-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.post-job-container h1 {
+  margin-bottom: 30px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+@media (max-width: 768px) {
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+}
