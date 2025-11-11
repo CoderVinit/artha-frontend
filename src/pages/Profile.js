@@ -3,6 +3,7 @@ import axios from 'axios';
 import { toast } from 'react-toastify';
 import { AuthContext } from '../context/AuthContext';
 import './Profile.css';
+import { BASE_URL } from '../config/constant';
 
 const Profile = () => {
   const { user, token } = useContext(AuthContext);
@@ -43,7 +44,7 @@ const Profile = () => {
     };
 
     try {
-      await axios.put('/api/users/profile', profileData, {
+      await axios.put(`${BASE_URL}/api/users/profile`, profileData, {
         headers: { Authorization: `Bearer ${token}` }
       });
       toast.success('Profile updated successfully!');

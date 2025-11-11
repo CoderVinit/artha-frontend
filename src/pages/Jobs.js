@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import axios from 'axios';
 import { toast } from 'react-toastify';
 import './Jobs.css';
+import { BASE_URL } from '../config/constant';
 
 const Jobs = () => {
   const [jobs, setJobs] = useState([]);
@@ -27,7 +28,7 @@ const Jobs = () => {
         if (filters[key]) queryParams.append(key, filters[key]);
       });
 
-      const response = await axios.get(`/api/jobs?${queryParams}`);
+      const response = await axios.get(`${BASE_URL}/api/jobs?${queryParams}`);
       setJobs(response.data.data);
     } catch (error) {
       toast.error('Error fetching jobs');

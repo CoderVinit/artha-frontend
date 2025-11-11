@@ -3,6 +3,7 @@ import axios from 'axios';
 import { toast } from 'react-toastify';
 import { AuthContext } from '../context/AuthContext';
 import './Applications.css';
+import { BASE_URL } from '../config/constant';
 
 const Applications = () => {
   const { user, token } = useContext(AuthContext);
@@ -16,9 +17,9 @@ const Applications = () => {
   const fetchApplications = async () => {
     try {
       const endpoint = user.role === 'jobseeker' 
-        ? '/api/applications/my-applications'
-        : '/api/applications/employer/all'; // You'd need to implement this endpoint
-
+        ? `${BASE_URL}/api/applications/my-applications`
+        : `${BASE_URL}/api/applications/employer/all`; // You'd need to implement this endpoint
+      
       const response = await axios.get(endpoint, {
         headers: { Authorization: `Bearer ${token}` }
       });

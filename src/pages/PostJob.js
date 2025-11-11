@@ -4,6 +4,7 @@ import axios from 'axios';
 import { toast } from 'react-toastify';
 import { AuthContext } from '../context/AuthContext';
 import './PostJob.css';
+import { BASE_URL } from '../config/constant';
 
 const PostJob = () => {
   const { token } = useContext(AuthContext);
@@ -41,7 +42,7 @@ const PostJob = () => {
     };
 
     try {
-      await axios.post('/api/jobs', jobData, {
+      await axios.post(`${BASE_URL}/api/jobs`, jobData, {
         headers: { Authorization: `Bearer ${token}` }
       });
       toast.success('Job posted successfully!');

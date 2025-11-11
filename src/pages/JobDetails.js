@@ -4,6 +4,7 @@ import axios from 'axios';
 import { toast } from 'react-toastify';
 import { AuthContext } from '../context/AuthContext';
 import './JobDetails.css';
+import { BASE_URL } from '../config/constant';
 
 const JobDetails = () => {
   const { id } = useParams();
@@ -21,7 +22,7 @@ const JobDetails = () => {
 
   const fetchJobDetails = async () => {
     try {
-      const response = await axios.get(`/api/jobs/${id}`);
+      const response = await axios.get(`${BASE_URL}/api/jobs/${id}`);
       setJob(response.data.data);
     } catch (error) {
       toast.error('Error fetching job details');
@@ -48,7 +49,7 @@ const JobDetails = () => {
     setApplying(true);
 
     try {
-      await axios.post('/api/applications', 
+      await axios.post(`${BASE_URL}/api/applications`, 
         { job: id, coverLetter },
         { headers: { Authorization: `Bearer ${token}` } }
       );
